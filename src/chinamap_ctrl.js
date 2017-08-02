@@ -16,9 +16,10 @@ link(scope, elem, attrs, ctrl) {
 		//updateMap(elem);
 		
 		elem = elem.find('.chinamap-panel');
+		window.print("2"); 
         var myChart = echarts.init(elem);
 
-		window.print("2"); 
+		
 		
         // 指定图表的配置项和数据
         var option = {

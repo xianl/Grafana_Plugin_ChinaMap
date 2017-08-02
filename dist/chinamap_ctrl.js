@@ -80,9 +80,8 @@ System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_expor
 						//updateMap(elem);
 
 						elem = elem.find('.chinamap-panel');
-						var myChart = echarts.init(elem);
-
 						window.print("2");
+						var myChart = echarts.init(elem);
 
 						// 指定图表的配置项和数据
 						var option = {
