@@ -18,6 +18,8 @@ link(scope, elem, attrs, ctrl) {
 		elem = elem.find('.chinamap-panel');
         var myChart = echarts.init(elem);
 
+		window.print("2"); 
+		
         // 指定图表的配置项和数据
         var option = {
 				tooltip: {
