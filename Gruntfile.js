@@ -7,8 +7,6 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
-    clean: ["dist"],
-
     copy: {
       src_to_dist: {
         cwd: 'src',
@@ -50,5 +48,5 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('default', ['clean', 'copy:src_to_dist', 'copy:pluginDef', 'babel']);
+  grunt.registerTask('default', ['copy:src_to_dist', 'copy:pluginDef', 'babel']);
 };
