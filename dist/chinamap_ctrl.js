@@ -81,7 +81,7 @@ System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_expor
 							//console.log(elem[0]);
 							var myChart = echarts.init(elem[0]);
 
-							option = {
+							var option = {
 								tooltip: {
 									trigger: 'item',
 									formatter: '{b}'

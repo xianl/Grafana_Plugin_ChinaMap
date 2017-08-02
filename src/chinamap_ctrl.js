@@ -21,7 +21,7 @@ link(scope, elem, attrs, ctrl) {
 
 		
 		
-         option = {
+         var option = {
 			tooltip: {
 				trigger: 'item',
 				formatter: '{b}'
