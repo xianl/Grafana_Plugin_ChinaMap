@@ -75,32 +75,30 @@ System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_expor
 										key: 'link',
 										value: function link(scope, elem, attrs, ctrl) {
 
-												//this.events.on('render', () => {
+												this.events.on('render', function () {
 
+														elem = elem.find('.chinamap-panel');
+														//console.log(elem[0]);
+														var myChart = echarts.init(elem[0]);
 
-												elem = elem.find('.chinamap-panel');
-												//console.log(elem[0]);
-												var myChart = echarts.init(elem[0]);
+														var option = {
+																title: { text: 'ECharts 入门示例' },
+																tooltip: {},
+																xAxis: {
+																		data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+																},
+																yAxis: {},
+																series: [{
+																		name: '销量',
+																		type: 'bar',
+																		data: [5, 20, 36, 10, 10, 20]
+																}]
+														};
 
-												var option = {
-														title: { text: 'ECharts 入门示例' },
-														tooltip: {},
-														xAxis: {
-																data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-														},
-														yAxis: {},
-														series: [{
-																name: '销量',
-																type: 'bar',
-																data: [5, 20, 36, 10, 10, 20]
-														}]
-												};
-
-												// 使用刚指定的配置项和数据显示图表。
-												myChart.setOption(option);
-												console.log("finish");
-
-												//});
+														// 使用刚指定的配置项和数据显示图表。
+														myChart.setOption(option);
+														console.log("finish");
+												});
 										}
 								}]);
 
