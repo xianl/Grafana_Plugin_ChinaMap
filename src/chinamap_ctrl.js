@@ -9,10 +9,9 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
   }
 
 
-
 link(scope, elem, attrs, ctrl) {
      
-	 this.events.on('render', () => {
+	 //this.events.on('render', () => {
 
 		//updateMap(elem);
 		
@@ -50,7 +49,8 @@ link(scope, elem, attrs, ctrl) {
         myChart.setOption(option);
 		
 		
-	});
-  }
+	//});
+    }
 }
+
 ChinaMapCtrl.templateUrl = 'module.html';
