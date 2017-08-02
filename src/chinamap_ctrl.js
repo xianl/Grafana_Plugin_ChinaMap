@@ -21,7 +21,6 @@ link(scope, elem, attrs, ctrl) {
 
 		
 		
-        // 指定图表的配置项和数据
         var option = {
 				tooltip: {
 				trigger: 'item',

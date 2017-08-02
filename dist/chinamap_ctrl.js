@@ -83,7 +83,6 @@ System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_expor
 						//console.log(elem[0]);
 						var myChart = echarts.init(elem[0]);
 
-						// 指定图表的配置项和数据
 						var option = {
 							tooltip: {
 								trigger: 'item',
