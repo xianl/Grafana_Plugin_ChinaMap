@@ -16,8 +16,8 @@ link(scope, elem, attrs, ctrl) {
 		//updateMap(elem);
 		
 		elem = elem.find('.chinamap-panel');
-		console.log("2");
-        var myChart = echarts.init(elem);
+		//console.log(elem[0]);
+        var myChart = echarts.init(elem[0]);
 
 		
 		
