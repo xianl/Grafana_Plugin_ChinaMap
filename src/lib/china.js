@@ -8,6 +8,7 @@
     } else {
         // Browser globals
         factory({}, root.echarts);
+		console.log("test");
     }
 }(this, function (exports, echarts) {
     var log = function (msg) {
