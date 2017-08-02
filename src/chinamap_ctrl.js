@@ -13,7 +13,7 @@ link(scope, elem, attrs, ctrl) {
      
 	 //this.events.on('render', () => {
 
-		//updateMap(elem);
+		
 		
 		elem = elem.find('.chinamap-panel');
 		//console.log(elem[0]);
@@ -37,6 +37,7 @@ link(scope, elem, attrs, ctrl) {
 
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
+		console.log("finish");
 		
 		
 	//});

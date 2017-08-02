@@ -77,7 +77,6 @@ System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_expor
 
 												//this.events.on('render', () => {
 
-												//updateMap(elem);
 
 												elem = elem.find('.chinamap-panel');
 												//console.log(elem[0]);
@@ -99,6 +98,7 @@ System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_expor
 
 												// 使用刚指定的配置项和数据显示图表。
 												myChart.setOption(option);
+												console.log("finish");
 
 												//});
 										}
