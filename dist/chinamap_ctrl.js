@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_export, _context) {
+System.register(['app/plugins/sdk', './lib/echarts.min', 'moment'], function (_export, _context) {
 	"use strict";
 
 	var MetricsPanelCtrl, echarts, moment, _createClass, ChinaMapCtrl;
@@ -38,8 +38,8 @@ System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_expor
 	return {
 		setters: [function (_appPluginsSdk) {
 			MetricsPanelCtrl = _appPluginsSdk.MetricsPanelCtrl;
-		}, function (_libEcharts) {
-			echarts = _libEcharts.default;
+		}, function (_libEchartsMin) {
+			echarts = _libEchartsMin.default;
 		}, function (_moment) {
 			moment = _moment.default;
 		}],
