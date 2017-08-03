@@ -1,6 +1,5 @@
 import {MetricsPanelCtrl} from 'app/plugins/sdk';
 import echarts from './lib/echarts';
-import china from './lib/china';
 import moment from 'moment';
 
 export class ChinaMapCtrl extends MetricsPanelCtrl {

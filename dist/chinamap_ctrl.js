@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['app/plugins/sdk', './lib/echarts', './lib/china', 'moment'], function (_export, _context) {
+System.register(['app/plugins/sdk', './lib/echarts', 'moment'], function (_export, _context) {
 	"use strict";
 
-	var MetricsPanelCtrl, echarts, china, moment, _createClass, ChinaMapCtrl;
+	var MetricsPanelCtrl, echarts, moment, _createClass, ChinaMapCtrl;
 
 	function _classCallCheck(instance, Constructor) {
 		if (!(instance instanceof Constructor)) {
@@ -40,8 +40,6 @@ System.register(['app/plugins/sdk', './lib/echarts', './lib/china', 'moment'], f
 			MetricsPanelCtrl = _appPluginsSdk.MetricsPanelCtrl;
 		}, function (_libEcharts) {
 			echarts = _libEcharts.default;
-		}, function (_libChina) {
-			china = _libChina.default;
 		}, function (_moment) {
 			moment = _moment.default;
 		}],
