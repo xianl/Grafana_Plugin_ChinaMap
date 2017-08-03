@@ -25,8 +25,8 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 
 			data.forEach(function (dataPoint) {
 
-				if (dataPoint.key == 'Sydney') value1 = dataPoint.valueFormatted;
-				if (dataPoint.key == 'Singapore') value2 = dataPoint.valueFormatted;
+				if (dataPoint.key == 'sydney') value1 = dataPoint.valueFormatted;
+				if (dataPoint.key == 'singapore') value2 = dataPoint.valueFormatted;
 			});
 
 			var option = {

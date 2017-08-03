@@ -22,8 +22,8 @@ export default function link(scope, elem, attrs, ctrl) {
 	
 	data.forEach((dataPoint) => {
       
-	  if(dataPoint.key == 'Sydney')  value1=dataPoint.valueFormatted;
-	  if(dataPoint.key == 'Singapore')  value2=dataPoint.valueFormatted;
+	  if(dataPoint.key == 'sydney')  value1=dataPoint.valueFormatted;
+	  if(dataPoint.key == 'singapore')  value2=dataPoint.valueFormatted;
 	  
     });
 	
