@@ -27,7 +27,7 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
     const data = [];
 
     this.series = dataList.map(this.seriesHandler.bind(this));
-    this.dataFormatter.setValues(data);
+    this.setValues(data);
     
     this.data = data;
 

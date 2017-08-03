@@ -93,7 +93,7 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
             var data = [];
 
             this.series = dataList.map(this.seriesHandler.bind(this));
-            this.dataFormatter.setValues(data);
+            this.setValues(data);
 
             this.data = data;
 
