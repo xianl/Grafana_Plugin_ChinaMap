@@ -49,10 +49,13 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					selectedMode: 'multiple',
 					label: {
 						normal: {
-							show: true
+							show: true,
+							areaColor: '#323c48',
+							borderColor: '#111'
 						},
 						emphasis: {
-							show: true
+							show: true,
+							areaColor: '#2a333d'
 						}
 					},
 					data: [{ name: '广东', value: value1 }, { name: '江苏', value: value2 }]

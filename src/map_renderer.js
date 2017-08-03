@@ -48,10 +48,13 @@ export default function link(scope, elem, attrs, ctrl) {
 					selectedMode : 'multiple',
 					label: {
 						normal: {
-							show: true
+							show: true,
+							areaColor: '#323c48',
+							borderColor: '#111'
 						},
 						emphasis: {
-							show: true
+							show: true,
+							 areaColor: '#2a333d'
 						}
 					},
 					data:[
