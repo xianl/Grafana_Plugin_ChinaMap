@@ -2,7 +2,6 @@ import echarts from './lib/echarts.min';
 
 export default function link(scope, elem, attrs, ctrl) {
   const mapContainer = elem.find('.chinamap-panel');
-  var myChart;
 
   ctrl.events.on('render', () => {
     render();
@@ -14,10 +13,8 @@ export default function link(scope, elem, attrs, ctrl) {
 
     if (!ctrl.map) {
       ctrl.map = echarts.init(mapContainer[0]);
-    }
-
-	
-	var option = {
+	  
+	  	var option = {
 			tooltip: {
 				trigger: 'item',
 				formatter: '{b}'
@@ -42,13 +39,13 @@ export default function link(scope, elem, attrs, ctrl) {
 				}
 			]
 		};
-        // 使用刚指定的配置项和数据显示图表。
+    // 使用刚指定的配置项和数据显示图表。
     ctrl.map.setOption(option);
-	console.log("finish");
+    }
 	
-	/*
     ctrl.map.resize();
 
+	/*
     if (ctrl.mapCenterMoved) ctrl.map.panToMapCenter();
 
     if (!ctrl.map.legend && ctrl.panel.showLegend) ctrl.map.createLegend();
