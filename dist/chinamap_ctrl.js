@@ -106,11 +106,11 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
           value: function setValues(data) {
             var _this2 = this;
 
-            if (this.ctrl.series && this.ctrl.series.length > 0) {
+            if (this.series && this.series.length > 0) {
               //let highestValue = 0;
               //let lowestValue = Number.MAX_VALUE;
 
-              this.ctrl.series.forEach(function (serie) {
+              this.series.forEach(function (serie) {
                 var lastPoint = _.last(serie.datapoints);
                 var lastValue = _.isArray(lastPoint) ? lastPoint[0] : null;
                 //const location = _.find(this.ctrl.locations, (loc) => { return loc.key.toUpperCase() === serie.alias.toUpperCase(); });
