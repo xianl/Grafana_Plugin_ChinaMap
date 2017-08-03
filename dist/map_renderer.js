@@ -1,8 +1,9 @@
 'use strict';
 
-System.register([], function (_export, _context) {
+System.register(['./lib/echarts.min'], function (_export, _context) {
   "use strict";
 
+  var echarts;
   function link(scope, elem, attrs, ctrl) {
     var mapContainer = elem.find('.chinamap-panel');
 
@@ -33,7 +34,9 @@ System.register([], function (_export, _context) {
   _export('default', link);
 
   return {
-    setters: [],
+    setters: [function (_libEchartsMin) {
+      echarts = _libEchartsMin.default;
+    }],
     execute: function () {}
   };
 });

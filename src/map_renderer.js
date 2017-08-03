@@ -1,4 +1,4 @@
-
+import echarts from './lib/echarts.min';
 
 export default function link(scope, elem, attrs, ctrl) {
   const mapContainer = elem.find('.chinamap-panel');
