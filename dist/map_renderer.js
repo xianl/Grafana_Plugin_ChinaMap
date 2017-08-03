@@ -34,6 +34,14 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					trigger: 'item',
 					formatter: '{b}'
 				},
+				visualMap: {
+					min: 0,
+					max: 10,
+					left: 'left',
+					top: 'bottom',
+					text: ['高', '低'], // 文本，默认为数值文本
+					calculable: true
+				},
 				series: [{
 					name: '中国',
 					type: 'map',
