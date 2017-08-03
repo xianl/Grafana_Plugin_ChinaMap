@@ -16,7 +16,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
       //if (!ctrl.data) return;
 
       if (!ctrl.map) {
-        ctrl.map = echarts.init(mapContainer[0]);
+        var myChart = echarts.init(mapContainer[0]);
       }
 
       /*

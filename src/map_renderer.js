@@ -12,7 +12,7 @@ export default function link(scope, elem, attrs, ctrl) {
     //if (!ctrl.data) return;
 
     if (!ctrl.map) {
-      ctrl.map = echarts.init(mapContainer[0]);
+      var myChart = echarts.init(mapContainer[0]);
     }
 
 	/*
