@@ -6,6 +6,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 	var echarts;
 	function link(scope, elem, attrs, ctrl) {
 		var mapContainer = elem.find('.chinamap-panel');
+		var myChart;
 
 		ctrl.events.on('render', function () {
 			render();
@@ -15,8 +16,8 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 		function render() {
 			//if (!ctrl.data) return;
 
-			if (!ctrl.map) {
-				var myChart = echarts.init(mapContainer[0]);
+			if (!mychart) {
+				myChart = echarts.init(mapContainer[0]);
 			}
 
 			var option = {

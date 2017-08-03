@@ -2,6 +2,7 @@ import echarts from './lib/echarts.min';
 
 export default function link(scope, elem, attrs, ctrl) {
   const mapContainer = elem.find('.chinamap-panel');
+  var myChart;
 
   ctrl.events.on('render', () => {
     render();
@@ -11,8 +12,8 @@ export default function link(scope, elem, attrs, ctrl) {
   function render() {
     //if (!ctrl.data) return;
 
-    if (!ctrl.map) {
-      var myChart = echarts.init(mapContainer[0]);
+    if (!mychart) {
+      myChart = echarts.init(mapContainer[0]);
     }
 
 	
