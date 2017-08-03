@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'lodash'], function (_export, _context) {
+System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'lodash', 'app/core/time_series2'], function (_export, _context) {
   "use strict";
 
-  var MetricsPanelCtrl, echarts, mapRenderer, _, _createClass, ChinaMapCtrl;
+  var MetricsPanelCtrl, echarts, mapRenderer, _, TimeSeries, _createClass, ChinaMapCtrl;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -44,6 +44,8 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
       mapRenderer = _map_renderer.default;
     }, function (_lodash) {
       _ = _lodash.default;
+    }, function (_appCoreTime_series) {
+      TimeSeries = _appCoreTime_series.default;
     }],
     execute: function () {
       _createClass = function () {
@@ -140,6 +142,17 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
               //data.lowestValue = lowestValue;
               //data.valueRange = highestValue - lowestValue;
             }
+          }
+        }, {
+          key: 'seriesHandler',
+          value: function seriesHandler(seriesData) {
+            var series = new TimeSeries({
+              datapoints: seriesData.datapoints,
+              alias: seriesData.target
+            });
+
+            series.flotpairs = series.getFlotPairs(this.panel.nullPointMode);
+            return series;
           }
         }, {
           key: 'link',

@@ -2,6 +2,7 @@ import {MetricsPanelCtrl} from 'app/plugins/sdk';
 import echarts from './lib/echarts.min';
 import mapRenderer from './map_renderer';
 import _ from 'lodash';
+import TimeSeries from 'app/core/time_series2';
 
 export class ChinaMapCtrl extends MetricsPanelCtrl {
 	
@@ -72,8 +73,19 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
       //data.highestValue = highestValue;
       //data.lowestValue = lowestValue;
       //data.valueRange = highestValue - lowestValue;
+     }
     }
-  }
+	
+	seriesHandler(seriesData) {
+    const series = new TimeSeries({
+      datapoints: seriesData.datapoints,
+      alias: seriesData.target,
+    });
+
+    series.flotpairs = series.getFlotPairs(this.panel.nullPointMode);
+    return series;
+    }
+
 	
 	
 	link(scope, elem, attrs, ctrl) {
