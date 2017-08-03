@@ -1,6 +1,6 @@
 import {MetricsPanelCtrl} from 'app/plugins/sdk';
 import echarts from './lib/echarts.min';
-import moment from 'moment';
+import mapRenderer from './map_renderer';
 
 export class ChinaMapCtrl extends MetricsPanelCtrl {
   constructor($scope, $injector) {
@@ -12,50 +12,9 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
   }
 
 
-link(scope, elem, attrs, ctrl) {
-     
-	 this.events.on('render', () => {
-
-		
-		
-		elem = elem.find('.chinamap-panel');
-		//console.log(elem[0]);
-        var myChart = echarts.init(elem[0]);
-
-		
-		
-         var option = {
-			tooltip: {
-				trigger: 'item',
-				formatter: '{b}'
-			},
-			series: [
-				{
-					name: '中国',
-					type: 'map',
-					mapType: 'china',
-					selectedMode : 'multiple',
-					label: {
-						normal: {
-							show: true
-						},
-						emphasis: {
-							show: true
-						}
-					},
-					data:[
-						{name:'广东', selected:true}
-					]
-				}
-			]
-		};
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption(option);
-		console.log("finish");
-		
-		
-		});
-    }
+	link(scope, elem, attrs, ctrl) {
+		 
+		 mapRenderer(scope, elem, attrs, ctrl);
+	}
 }
-
 ChinaMapCtrl.templateUrl = 'module.html';

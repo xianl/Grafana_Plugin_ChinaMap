@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['app/plugins/sdk', './lib/echarts.min', 'moment'], function (_export, _context) {
+System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer'], function (_export, _context) {
 	"use strict";
 
-	var MetricsPanelCtrl, echarts, moment, _createClass, ChinaMapCtrl;
+	var MetricsPanelCtrl, echarts, mapRenderer, _createClass, ChinaMapCtrl;
 
 	function _classCallCheck(instance, Constructor) {
 		if (!(instance instanceof Constructor)) {
@@ -40,8 +40,8 @@ System.register(['app/plugins/sdk', './lib/echarts.min', 'moment'], function (_e
 			MetricsPanelCtrl = _appPluginsSdk.MetricsPanelCtrl;
 		}, function (_libEchartsMin) {
 			echarts = _libEchartsMin.default;
-		}, function (_moment) {
-			moment = _moment.default;
+		}, function (_map_renderer) {
+			mapRenderer = _map_renderer.default;
 		}],
 		execute: function () {
 			_createClass = function () {
@@ -81,37 +81,7 @@ System.register(['app/plugins/sdk', './lib/echarts.min', 'moment'], function (_e
 					key: 'link',
 					value: function link(scope, elem, attrs, ctrl) {
 
-						this.events.on('render', function () {
-
-							elem = elem.find('.chinamap-panel');
-							//console.log(elem[0]);
-							var myChart = echarts.init(elem[0]);
-
-							var option = {
-								tooltip: {
-									trigger: 'item',
-									formatter: '{b}'
-								},
-								series: [{
-									name: '中国',
-									type: 'map',
-									mapType: 'china',
-									selectedMode: 'multiple',
-									label: {
-										normal: {
-											show: true
-										},
-										emphasis: {
-											show: true
-										}
-									},
-									data: [{ name: '广东', selected: true }]
-								}]
-							};
-							// 使用刚指定的配置项和数据显示图表。
-							myChart.setOption(option);
-							console.log("finish");
-						});
+						mapRenderer(scope, elem, attrs, ctrl);
 					}
 				}]);
 
