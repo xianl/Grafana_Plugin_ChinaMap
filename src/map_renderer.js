@@ -14,7 +14,20 @@ export default function link(scope, elem, attrs, ctrl) {
     if (!ctrl.map) {
       ctrl.map = echarts.init(mapContainer[0]);
 	  
-	  	var option = {
+    }
+	
+	const data = ctrl.data;
+	var value1;
+	var value2;
+	
+	data.forEach((dataPoint) => {
+      
+	  if(datapoint.key == 'Sydney')  value1=datapoint.valueFormatted;
+	  if(datapoint.key == 'Singapore')  value2=datapoint.valueFormatted;
+	  
+    });
+	
+	var option = {
 			tooltip: {
 				trigger: 'item',
 				formatter: '{b}'
@@ -34,16 +47,18 @@ export default function link(scope, elem, attrs, ctrl) {
 						}
 					},
 					data:[
-						{name:'广东', selected:true}
+						{name:'广东', value: value1},
+						{name:'江苏', value: value2},
 					]
 				}
 			]
 		};
     // 使用刚指定的配置项和数据显示图表。
     ctrl.map.setOption(option);
-    }
 	
     ctrl.map.resize();
+	
+		
 
 	/*
     if (ctrl.mapCenterMoved) ctrl.map.panToMapCenter();
