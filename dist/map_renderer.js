@@ -20,36 +20,31 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 				ctrl.map = echarts.init(mapContainer[0]);
 			}
 
-			/*
-   var option = {
-   		tooltip: {
-   			trigger: 'item',
-   			formatter: '{b}'
-   		},
-   		series: [
-   			{
-   				name: '中国',
-   				type: 'map',
-   				mapType: 'china',
-   				selectedMode : 'multiple',
-   				label: {
-   					normal: {
-   						show: true
-   					},
-   					emphasis: {
-   						show: true
-   					}
-   				},
-   				data:[
-   					{name:'广东', selected:true}
-   				]
-   			}
-   		]
-   	};
-          // 使用刚指定的配置项和数据显示图表。
-      myChart.setOption(option);
-   console.log("finish");
-   */
+			var option = {
+				tooltip: {
+					trigger: 'item',
+					formatter: '{b}'
+				},
+				series: [{
+					name: '中国',
+					type: 'map',
+					mapType: 'china',
+					selectedMode: 'multiple',
+					label: {
+						normal: {
+							show: true
+						},
+						emphasis: {
+							show: true
+						}
+					},
+					data: [{ name: '广东', selected: true }]
+				}]
+			};
+			// 使用刚指定的配置项和数据显示图表。
+			ctrl.map.setOption(option);
+			console.log("finish");
+
 			/*
       ctrl.map.resize();
    
