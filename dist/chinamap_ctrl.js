@@ -104,8 +104,6 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
         }, {
           key: 'setValues',
           value: function setValues(data) {
-            var _this2 = this;
-
             if (this.series && this.series.length > 0) {
               //let highestValue = 0;
               //let lowestValue = Number.MAX_VALUE;
@@ -125,7 +123,7 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
                     //locationName: location.name,
                     //locationLatitude: location.latitude,
                     //locationLongitude: location.longitude,
-                    value: serie.stats[_this2.ctrl.panel.valueName],
+                    //value: serie.stats[this.ctrl.panel.valueName],
                     valueFormatted: lastValue,
                     valueRounded: 0
                   };

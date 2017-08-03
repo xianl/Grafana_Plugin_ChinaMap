@@ -57,7 +57,7 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
             //locationName: location.name,
             //locationLatitude: location.latitude,
             //locationLongitude: location.longitude,
-            value: serie.stats[this.ctrl.panel.valueName],
+            //value: serie.stats[this.ctrl.panel.valueName],
             valueFormatted: lastValue,
             valueRounded: 0
           };
