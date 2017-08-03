@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer'], function (_export, _context) {
+System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'lodash'], function (_export, _context) {
   "use strict";
 
-  var MetricsPanelCtrl, echarts, mapRenderer, _createClass, ChinaMapCtrl;
+  var MetricsPanelCtrl, echarts, mapRenderer, _, _createClass, ChinaMapCtrl;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -42,6 +42,8 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer'], func
       echarts = _libEchartsMin.default;
     }, function (_map_renderer) {
       mapRenderer = _map_renderer.default;
+    }, function (_lodash) {
+      _ = _lodash.default;
     }],
     execute: function () {
       _createClass = function () {
@@ -85,23 +87,59 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer'], func
                if (this.dashboard.snapshot && this.locations) {
                  this.panel.snapshotLocationData = this.locations;
                }
-            
-               const data = [];
-            
-               if (this.panel.locationData === 'geohash') {
-                 this.dataFormatter.setGeohashValues(dataList, data);
-               } else if (this.panel.locationData === 'table') {
-                 const tableData = dataList.map(DataFormatter.tableHandler.bind(this));
-                 this.dataFormatter.setTableValues(tableData, data);
-               } else {
-                 this.series = dataList.map(this.seriesHandler.bind(this));
-                 this.dataFormatter.setValues(data);
-               }
-               this.data = data;
-            
-               this.updateThresholdData();
             */
+            var data = [];
+
+            this.series = dataList.map(this.seriesHandler.bind(this));
+            this.dataFormatter.setValues(data);
+
+            this.data = data;
+
+            //this.updateThresholdData();
+
             this.render();
+          }
+        }, {
+          key: 'setValues',
+          value: function setValues(data) {
+            var _this2 = this;
+
+            if (this.ctrl.series && this.ctrl.series.length > 0) {
+              //let highestValue = 0;
+              //let lowestValue = Number.MAX_VALUE;
+
+              this.ctrl.series.forEach(function (serie) {
+                var lastPoint = _.last(serie.datapoints);
+                var lastValue = _.isArray(lastPoint) ? lastPoint[0] : null;
+                //const location = _.find(this.ctrl.locations, (loc) => { return loc.key.toUpperCase() === serie.alias.toUpperCase(); });
+
+                //if (!location) return;
+
+                if (_.isString(lastValue)) {
+                  data.push({ key: serie.alias, value: 0, valueFormatted: lastValue, valueRounded: 0 });
+                } else {
+                  var dataValue = {
+                    key: serie.alias,
+                    //locationName: location.name,
+                    //locationLatitude: location.latitude,
+                    //locationLongitude: location.longitude,
+                    value: serie.stats[_this2.ctrl.panel.valueName],
+                    valueFormatted: lastValue,
+                    valueRounded: 0
+                  };
+
+                  //if (dataValue.value > highestValue) highestValue = dataValue.value;
+                  //if (dataValue.value < lowestValue) lowestValue = dataValue.value;
+
+                  //dataValue.valueRounded = this.kbn.roundValue(dataValue.value, parseInt(this.ctrl.panel.decimals, 10) || 0);
+                  data.push(dataValue);
+                }
+              });
+
+              //data.highestValue = highestValue;
+              //data.lowestValue = lowestValue;
+              //data.valueRange = highestValue - lowestValue;
+            }
           }
         }, {
           key: 'link',
