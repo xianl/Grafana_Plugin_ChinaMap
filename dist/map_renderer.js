@@ -50,7 +50,8 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					selectedMode: 'multiple',
 					label: {
 						normal: {
-							show: true
+							show: true,
+							color: '#a6c84c'
 						},
 						emphasis: {
 							show: true

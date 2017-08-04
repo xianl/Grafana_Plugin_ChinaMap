@@ -49,7 +49,8 @@ export default function link(scope, elem, attrs, ctrl) {
 					selectedMode : 'multiple',
 					label: {
 						normal: {
-							show: true
+							show: true,
+							color: '#a6c84c'
 						},
 						emphasis: {
 							show: true,
