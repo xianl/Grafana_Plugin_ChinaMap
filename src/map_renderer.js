@@ -19,6 +19,7 @@ export default function link(scope, elem, attrs, ctrl) {
 	const data = ctrl.data;
 	var value1;
 	var value2;
+	var thresholds;
 	
 	data.forEach((dataPoint) => {
       
@@ -27,6 +28,10 @@ export default function link(scope, elem, attrs, ctrl) {
 	  
     });
 	
+	thresholds = ctrl.panel.thresholds.split(',').map((strValue) => {
+	return Number(strValue.trim());
+	 });
+	
 	var option = {
 			backgroundColor: ctrl.panel.backgroundColor,
 			tooltip: {
@@ -34,8 +39,8 @@ export default function link(scope, elem, attrs, ctrl) {
 				formatter: '{b}'
 			},
 			visualMap: {
-			min: 0,
-			max: ctrl.data.thresholds[1],
+			min: thresholds[0],
+			max: thresholds[1],
 			left: 'left',
 			inRange: {
 				color: ctrl.panel.dataColors

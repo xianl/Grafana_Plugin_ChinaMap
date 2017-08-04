@@ -22,11 +22,16 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 			var data = ctrl.data;
 			var value1;
 			var value2;
+			var thresholds;
 
 			data.forEach(function (dataPoint) {
 
 				if (dataPoint.key == 'sydney') value1 = dataPoint.valueFormatted;
 				if (dataPoint.key == 'singapore') value2 = dataPoint.valueFormatted;
+			});
+
+			thresholds = ctrl.panel.thresholds.split(',').map(function (strValue) {
+				return Number(strValue.trim());
 			});
 
 			var option = {
@@ -36,8 +41,8 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					formatter: '{b}'
 				},
 				visualMap: {
-					min: 0,
-					max: ctrl.data.thresholds[1],
+					min: thresholds[0],
+					max: thresholds[1],
 					left: 'left',
 					inRange: {
 						color: ctrl.panel.dataColors
