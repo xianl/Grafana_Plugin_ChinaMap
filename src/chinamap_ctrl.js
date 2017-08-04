@@ -53,7 +53,6 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
 	onInitEditMode() {
     
 		this.addEditorTab('ChinaMap', 'public/plugins/grafana-chinamap-panel/editor.html', 2);
-		this.render();
 	
 	}
 

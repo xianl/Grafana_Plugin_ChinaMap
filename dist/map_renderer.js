@@ -88,9 +88,8 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 			// 使用刚指定的配置项和数据显示图表。
 			ctrl.map.setOption(option);
 
-			console.log(ctrl.map.getHeight());
-			ctrl.map.resize();
-			ctrl.map.resize();
+			//ctrl.map.resize();
+
 
 			/*
       if (ctrl.mapCenterMoved) ctrl.map.panToMapCenter();

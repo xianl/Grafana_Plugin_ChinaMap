@@ -39,13 +39,13 @@ export default function link(scope, elem, attrs, ctrl) {
 				formatter: '{b}'
 			},
 			visualMap: {
-			min: thresholds[0],
-			max: thresholds[1],
-			left: 'left',
-			inRange: {
-				color: ctrl.panel.dataColors
-			},
-			textStyle: {
+				min: thresholds[0],
+				max: thresholds[1],
+				left: 'left',
+				inRange: {
+					color: ctrl.panel.dataColors
+				},
+				textStyle: {
 					color:ctrl.panel.thresholdTextColor
 			},
 			top: 'bottom',
@@ -91,9 +91,7 @@ export default function link(scope, elem, attrs, ctrl) {
     // 使用刚指定的配置项和数据显示图表。
     ctrl.map.setOption(option);
 	
-	console.log(ctrl.map.getHeight());
-    ctrl.map.resize();
-	ctrl.map.resize();
+    //ctrl.map.resize();
 		
 
 	/*

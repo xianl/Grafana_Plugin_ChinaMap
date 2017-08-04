@@ -121,7 +121,6 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
           value: function onInitEditMode() {
 
             this.addEditorTab('ChinaMap', 'public/plugins/grafana-chinamap-panel/editor.html', 2);
-            this.render();
           }
         }, {
           key: 'changeThresholds',
