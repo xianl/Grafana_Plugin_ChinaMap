@@ -56,7 +56,10 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 							}
 						},
 						emphasis: {
-							show: true
+							show: true,
+							textStyle: {
+								color: ctrl.panel.labelEmphasisColor
+							}
 						}
 					},
 					itemStyle: {

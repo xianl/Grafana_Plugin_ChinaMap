@@ -56,6 +56,9 @@ export default function link(scope, elem, attrs, ctrl) {
 						},
 						emphasis: {
 							show: true,
+							textStyle: {
+								color: ctrl.panel.labelEmphasisColor
+							}
 						}
 					},
 					itemStyle: {
