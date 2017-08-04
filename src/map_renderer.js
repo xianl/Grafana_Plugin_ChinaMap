@@ -48,15 +48,21 @@ export default function link(scope, elem, attrs, ctrl) {
 					selectedMode : 'multiple',
 					label: {
 						normal: {
-							show: true,
-							areaColor: '#323c48',
-							borderColor: '#111'
+							show: true
 						},
 						emphasis: {
 							show: true,
-							 areaColor: '#2a333d'
 						}
 					},
+					itemStyle: {
+						normal: {
+							areaColor: '#223c48',
+							borderColor: '#111'
+						},
+						emphasis: {
+							areaColor: '#2a333d'
+						}
+					},		
 					data:[
 						{name:'广东', value: value1},
 						{name:'江苏', value: value2},

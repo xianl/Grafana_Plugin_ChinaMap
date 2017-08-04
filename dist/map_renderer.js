@@ -49,12 +49,18 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					selectedMode: 'multiple',
 					label: {
 						normal: {
-							show: true,
-							areaColor: '#323c48',
+							show: true
+						},
+						emphasis: {
+							show: true
+						}
+					},
+					itemStyle: {
+						normal: {
+							areaColor: '#223c48',
 							borderColor: '#111'
 						},
 						emphasis: {
-							show: true,
 							areaColor: '#2a333d'
 						}
 					},
