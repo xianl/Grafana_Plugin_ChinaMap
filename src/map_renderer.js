@@ -93,7 +93,7 @@ export default function link(scope, elem, attrs, ctrl) {
 	
 	console.log(ctrl.map.getHeight());
     ctrl.map.resize();
-	
+	ctrl.map.resize();
 		
 
 	/*

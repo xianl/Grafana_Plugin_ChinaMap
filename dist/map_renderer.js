@@ -90,6 +90,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 
 			console.log(ctrl.map.getHeight());
 			ctrl.map.resize();
+			ctrl.map.resize();
 
 			/*
       if (ctrl.mapCenterMoved) ctrl.map.panToMapCenter();
