@@ -40,7 +40,7 @@ export default function link(scope, elem, attrs, ctrl) {
 			inRange: {
 				color: ctrl.panel.dataColors
 			},
-			textstyle: {
+			textStyle: {
 					color:ctrl.panel.thresholdTextColor
 			},
 			top: 'bottom',

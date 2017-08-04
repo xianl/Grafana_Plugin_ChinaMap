@@ -42,7 +42,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					inRange: {
 						color: ctrl.panel.dataColors
 					},
-					textstyle: {
+					textStyle: {
 						color: ctrl.panel.thresholdTextColor
 					},
 					top: 'bottom',
