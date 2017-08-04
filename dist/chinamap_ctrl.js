@@ -73,7 +73,7 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
         itemEmphasisColor: '#2a333d',
         labelColor: '#f5f5f5',
         labelEmphasisColor: '#f5896b',
-        dataColor: ['#83fa52', '#f6630e', '#f60e48']
+        dataColors: ['#83fa52', '#f6630e', '#f60e48']
       };
 
       _export('ChinaMapCtrl', ChinaMapCtrl = function (_MetricsPanelCtrl) {

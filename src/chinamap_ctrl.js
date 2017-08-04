@@ -11,7 +11,7 @@ const panelDefaults = {
   itemEmphasisColor: '#2a333d',
   labelColor: '#f5f5f5',
   labelEmphasisColor: '#f5896b',
-  dataColor: ['#83fa52','#f6630e','#f60e48']
+  dataColors: ['#83fa52','#f6630e','#f60e48']
 };
 
 export class ChinaMapCtrl extends MetricsPanelCtrl {

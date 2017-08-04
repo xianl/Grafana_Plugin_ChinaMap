@@ -39,7 +39,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					min: 0,
 					max: 10,
 					left: 'left',
-					color: ctrl.panel.dataColor,
+					color: ctrl.panel.dataColors,
 					top: 'bottom',
 					text: ['高', '低'], // 文本，默认为数值文本
 					calculable: true
