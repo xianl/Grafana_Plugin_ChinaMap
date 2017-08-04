@@ -14,6 +14,7 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
 
 		
 		this.events.on('data-received', this.onDataReceived.bind(this));
+		this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
 	}
 
 	onDataReceived(dataList) {
@@ -36,6 +37,12 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
     this.render();
     }
 	
+	onInitEditMode() {
+    
+		this.addEditorTab('ChinaMap', 'public/plugins/grafana-chinamap-panel/editor.html', 2);
+	
+	}
+
 	
 	setValues(data) {
     if (this.series && this.series.length > 0) {
