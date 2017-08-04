@@ -37,7 +37,9 @@ export default function link(scope, elem, attrs, ctrl) {
 			min: 0,
 			max: 10,
 			left: 'left',
-			color: ctrl.panel.dataColors,
+			inRange: {
+				color: ctrl.panel.dataColors
+			},
 			top: 'bottom',
 			text: ['高','低'],           // 文本，默认为数值文本
 			calculable: true
