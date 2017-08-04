@@ -91,6 +91,7 @@ export default function link(scope, elem, attrs, ctrl) {
     // 使用刚指定的配置项和数据显示图表。
     ctrl.map.setOption(option);
 	
+	console.log(mychart.getHeight());
     ctrl.map.resize();
 	
 		
