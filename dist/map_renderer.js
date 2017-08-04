@@ -51,7 +51,9 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					label: {
 						normal: {
 							show: true,
-							color: '#a6c84c'
+							textStyle: {
+								color: '#a6c84c'
+							}
 						},
 						emphasis: {
 							show: true

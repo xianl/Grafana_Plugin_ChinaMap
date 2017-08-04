@@ -50,7 +50,9 @@ export default function link(scope, elem, attrs, ctrl) {
 					label: {
 						normal: {
 							show: true,
-							color: '#a6c84c'
+							textStyle: {
+								color: '#a6c84c'
+							}
 						},
 						emphasis: {
 							show: true,
