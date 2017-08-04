@@ -11,7 +11,8 @@ const panelDefaults = {
   itemEmphasisColor: '#2a333d',
   labelColor: '#f5f5f5',
   labelEmphasisColor: '#f5896b',
-  dataColors: ['#83fa52','#f6630e','#f60e48']
+  dataColors: ['#83fa52','#f6630e','#f60e48'],
+  thresholds: '0,10'
 };
 
 export class ChinaMapCtrl extends MetricsPanelCtrl {
@@ -54,6 +55,29 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
 	
 	}
 
+	
+	changeThresholds() {
+		
+		this.updateThresholdData();
+		//this.map.legend.update();
+		this.render();
+	}
+	
+	updateThresholdData() {
+		
+		this.data.thresholds = this.panel.thresholds.split(',').map((strValue) => {
+		  return Number(strValue.trim());
+		});
+		while (_.size(this.panel.dataColors) > _.size(this.data.thresholds) + 1) {
+		  // too many colors. remove the last one.
+		  this.panel.dataColors.pop();
+		}
+		while (_.size(this.panel.dataColors) < _.size(this.data.thresholds) + 1) {
+		  // not enough colors. add one.
+		  const newColor = 'rgba(50, 172, 45, 0.97)';
+		  this.panel.dataColors.push(newColor);
+		}
+	}
 	
 	setValues(data) {
     if (this.series && this.series.length > 0) {
