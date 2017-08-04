@@ -9,7 +9,7 @@ export default function link(scope, elem, attrs, ctrl) {
   });
 
   function render() {
-    //if (!ctrl.data) return;
+    if (!ctrl.data) return;
 
     if (!ctrl.map) {
       ctrl.map = echarts.init(mapContainer[0]);

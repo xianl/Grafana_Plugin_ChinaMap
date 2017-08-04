@@ -13,7 +13,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 		});
 
 		function render() {
-			//if (!ctrl.data) return;
+			if (!ctrl.data) return;
 
 			if (!ctrl.map) {
 				ctrl.map = echarts.init(mapContainer[0]);
