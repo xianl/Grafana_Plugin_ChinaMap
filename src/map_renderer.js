@@ -28,7 +28,7 @@ export default function link(scope, elem, attrs, ctrl) {
     });
 	
 	var option = {
-			//backgroundColor: '#404a59',
+			backgroundColor: '#808080',
 			tooltip: {
 				trigger: 'item',
 				formatter: '{b}'
@@ -51,7 +51,7 @@ export default function link(scope, elem, attrs, ctrl) {
 						normal: {
 							show: true,
 							textStyle: {
-								color: '#a6c84c'
+								color: '#f5f5f5'
 							}
 						},
 						emphasis: {
@@ -60,7 +60,7 @@ export default function link(scope, elem, attrs, ctrl) {
 					},
 					itemStyle: {
 						normal: {
-							areaColor: '#323c48',
+							areaColor: '#2d3339',
 							borderColor: '#404a59'
 						},
 						emphasis: {
