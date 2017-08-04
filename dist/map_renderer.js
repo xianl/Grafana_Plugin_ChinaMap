@@ -88,7 +88,6 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 			// 使用刚指定的配置项和数据显示图表。
 			ctrl.map.setOption(option);
 
-			var t = setTimeout("alert('alert')", 5000);
 			ctrl.map.resize();
 
 			/*
