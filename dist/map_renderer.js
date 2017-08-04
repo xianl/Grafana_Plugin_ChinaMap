@@ -57,8 +57,8 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					},
 					itemStyle: {
 						normal: {
-							areaColor: '#223c48',
-							borderColor: '#111'
+							areaColor: '#323c48',
+							borderColor: '#404a59'
 						},
 						emphasis: {
 							areaColor: '#2a333d'
