@@ -1,7 +1,23 @@
 <div class="section gf-form-group">
 		<h5 class="section-heading">Color Options</h5>
 		<div class="gf-form">
-			<label class="gf-form-label width-10">BackgroundColor</label>
+			<label class="gf-form-label width-10">Background Color</label>
 				<spectrum-picker class="gf-form-input" ng-model="ctrl.panel.backgroundColor" ng-change="ctrl.render()" ></spectrum-picker>
+		</div>
+		<div class="gf-form">
+			<label class="gf-form-label width-10">Item Normal Color</label>
+				<spectrum-picker class="gf-form-input" ng-model="ctrl.panel.itemNormalColor" ng-change="ctrl.render()" ></spectrum-picker>
+		</div>
+		<div class="gf-form">
+			<label class="gf-form-label width-10">Item Border Color</label>
+				<spectrum-picker class="gf-form-input" ng-model="ctrl.panel.itemBorderColor" ng-change="ctrl.render()" ></spectrum-picker>
+		</div>
+		<div class="gf-form">
+			<label class="gf-form-label width-10">Item Emphasis Color</label>
+				<spectrum-picker class="gf-form-input" ng-model="ctrl.panel.itemEmphasisColor" ng-change="ctrl.render()" ></spectrum-picker>
+		</div>
+		<div class="gf-form">
+			<label class="gf-form-label width-10">Label Color</label>
+				<spectrum-picker class="gf-form-input" ng-model="ctrl.panel.labelColor" ng-change="ctrl.render()" ></spectrum-picker>
 		</div>
 </div>

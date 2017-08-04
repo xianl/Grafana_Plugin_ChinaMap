@@ -52,7 +52,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 						normal: {
 							show: true,
 							textStyle: {
-								color: '#f5f5f5'
+								color: ctrl.panel.labelColor
 							}
 						},
 						emphasis: {
@@ -61,11 +61,11 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					},
 					itemStyle: {
 						normal: {
-							areaColor: '#2d3339',
-							borderColor: '#404a59'
+							areaColor: ctrl.panel.itemNormalColor,
+							borderColor: ctrl.panel.itemBorderColor
 						},
 						emphasis: {
-							areaColor: '#2a333d'
+							areaColor: ctrl.panel.itemEmphasisColor
 						}
 					},
 					data: [{ name: '广东', value: value1 }, { name: '江苏', value: value2 }]
