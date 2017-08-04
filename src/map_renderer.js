@@ -35,7 +35,7 @@ export default function link(scope, elem, attrs, ctrl) {
 			},
 			visualMap: {
 			min: 0,
-			max: 10,
+			max: ctrl.data.thresholds,
 			left: 'left',
 			inRange: {
 				color: ctrl.panel.dataColors
