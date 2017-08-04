@@ -30,7 +30,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 			});
 
 			var option = {
-				backgroundColor: '#63696e',
+				backgroundColor: ctrl.panel.backgroundColor,
 				tooltip: {
 					trigger: 'item',
 					formatter: '{b}'
