@@ -28,7 +28,7 @@ export default function link(scope, elem, attrs, ctrl) {
     });
 	
 	var option = {
-			backgroundColor: '#808080',
+			backgroundColor: '#63696e',
 			tooltip: {
 				trigger: 'item',
 				formatter: '{b}'
