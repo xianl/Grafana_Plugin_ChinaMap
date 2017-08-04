@@ -37,7 +37,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 				},
 				visualMap: {
 					min: 0,
-					max: ctrl.data.thresholds,
+					max: ctrl.data.thresholds[1],
 					left: 'left',
 					inRange: {
 						color: ctrl.panel.dataColors
