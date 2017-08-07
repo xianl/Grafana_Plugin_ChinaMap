@@ -92,7 +92,7 @@ export default function link(scope, elem, attrs, ctrl) {
     ctrl.map.setOption(option);
 	
 	
-    ctrl.map.resize('auto,'ctrl.height);
+    ctrl.map.resize('auto',ctrl.height);
 		
 
 	/*
