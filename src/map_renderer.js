@@ -98,7 +98,7 @@ export default function link(scope, elem, attrs, ctrl) {
 		silent: false
 	}
 	
-    ctrl.map.resize('auto',ctrl.height);
+    ctrl.map.resize(opts);
 		
 
 	/*

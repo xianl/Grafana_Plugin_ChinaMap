@@ -95,7 +95,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 				silent: false
 			};
 
-			ctrl.map.resize('auto', ctrl.height);
+			ctrl.map.resize(opts);
 
 			/*
       if (ctrl.mapCenterMoved) ctrl.map.panToMapCenter();
