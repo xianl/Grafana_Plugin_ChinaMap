@@ -23,8 +23,8 @@ export default function link(scope, elem, attrs, ctrl) {
 	
 	data.forEach((dataPoint) => {
       
-	  if(dataPoint.key == 'sydney')  value1=dataPoint.valueFormatted;
-	  if(dataPoint.key == 'singapore')  value2=dataPoint.valueFormatted;
+	  if(dataPoint.key == 'shanghai')  value1=dataPoint.valueFormatted;
+	  if(dataPoint.key == 'guangzhou')  value2=dataPoint.valueFormatted;
 	  
     });
 	
@@ -82,8 +82,8 @@ export default function link(scope, elem, attrs, ctrl) {
 						}
 					},		
 					data:[
-						{name:'广东', value: value1},
-						{name:'江苏', value: value2},
+						{name:'上海', value: value1},
+						{name:'广东', value: value2},
 					]
 				}
 			]

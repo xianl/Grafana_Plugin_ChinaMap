@@ -26,8 +26,8 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 
 			data.forEach(function (dataPoint) {
 
-				if (dataPoint.key == 'sydney') value1 = dataPoint.valueFormatted;
-				if (dataPoint.key == 'singapore') value2 = dataPoint.valueFormatted;
+				if (dataPoint.key == 'shanghai') value1 = dataPoint.valueFormatted;
+				if (dataPoint.key == 'guangzhou') value2 = dataPoint.valueFormatted;
 			});
 
 			thresholds = ctrl.panel.thresholds.split(',').map(function (strValue) {
@@ -82,7 +82,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 							areaColor: ctrl.panel.itemEmphasisColor
 						}
 					},
-					data: [{ name: '广东', value: value1 }, { name: '江苏', value: value2 }]
+					data: [{ name: '上海', value: value1 }, { name: '广东', value: value2 }]
 				}]
 			};
 			// 使用刚指定的配置项和数据显示图表。
