@@ -42,7 +42,7 @@ export default function link(scope, elem, attrs, ctrl) {
 			backgroundColor: ctrl.panel.backgroundColor,
 			tooltip: {
 				trigger: 'item',
-				formatter: '{b}'
+				formatter: '{b} {c}'
 			},
 			visualMap: {
 				min: thresholds[0],
@@ -63,7 +63,7 @@ export default function link(scope, elem, attrs, ctrl) {
 					name: '中国',
 					type: 'map',
 					mapType: 'china',
-					//selectedMode : 'multiple',
+					selectedMode : 'multiple',
 					label: {
 						normal: {
 							show: true,
