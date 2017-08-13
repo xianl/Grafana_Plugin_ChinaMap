@@ -19,12 +19,14 @@ export default function link(scope, elem, attrs, ctrl) {
 	const data = ctrl.data;
 	var value1;
 	var value2;
+	var value3;
 	var thresholds;
 	
 	data.forEach((dataPoint) => {
       
-	  if(dataPoint.key == 'shanghai')  value1=dataPoint.valueFormatted;
-	  if(dataPoint.key == 'guangzhou')  value2=dataPoint.valueFormatted;
+	  if(dataPoint.key == '天津')  value1=dataPoint.valueFormatted;
+	  if(dataPoint.key == '辽宁')  value2=dataPoint.valueFormatted;
+	  if(dataPoint.key == '山东')  value3=dataPoint.valueFormatted;
 	  
     });
 	
@@ -82,8 +84,9 @@ export default function link(scope, elem, attrs, ctrl) {
 						}
 					},		
 					data:[
-						{name:'上海', value: value1},
-						{name:'广东', value: value2},
+						{name:'天津', value: value1},
+						{name:'辽宁', value: value2},
+						{name:'山东', value: value3},
 					]
 				}
 			]

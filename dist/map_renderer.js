@@ -22,12 +22,14 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 			var data = ctrl.data;
 			var value1;
 			var value2;
+			var value3;
 			var thresholds;
 
 			data.forEach(function (dataPoint) {
 
-				if (dataPoint.key == 'shanghai') value1 = dataPoint.valueFormatted;
-				if (dataPoint.key == 'guangzhou') value2 = dataPoint.valueFormatted;
+				if (dataPoint.key == '天津') value1 = dataPoint.valueFormatted;
+				if (dataPoint.key == '辽宁') value2 = dataPoint.valueFormatted;
+				if (dataPoint.key == '山东') value3 = dataPoint.valueFormatted;
 			});
 
 			thresholds = ctrl.panel.thresholds.split(',').map(function (strValue) {
@@ -82,7 +84,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 							areaColor: ctrl.panel.itemEmphasisColor
 						}
 					},
-					data: [{ name: '上海', value: value1 }, { name: '广东', value: value2 }]
+					data: [{ name: '天津', value: value1 }, { name: '辽宁', value: value2 }, { name: '山东', value: value3 }]
 				}]
 			};
 			// 使用刚指定的配置项和数据显示图表。
