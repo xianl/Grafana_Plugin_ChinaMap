@@ -3,7 +3,7 @@
 System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'lodash', 'app/core/time_series2'], function (_export, _context) {
   "use strict";
 
-  var MetricsPanelCtrl, echarts, mapRenderer, _, TimeSeries, _createClass, panelDefaults, ChinaMapCtrl;
+  var MetricsPanelCtrl, echarts, mapRenderer, _, TimeSeries, _createClass, panelDefaults, mapValueDefaults, ChinaMapCtrl;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -77,6 +77,7 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
         thresholds: '0,10',
         thresholdTextColor: '#f5f5f5'
       };
+      mapValueDefaults = { '北京': 0, '天津': 0, '上海': 0, '重庆': 0, '河北': 0, '山西': 0, '辽宁': 0, '吉林': 0, '黑龙江': 0, '江苏': 0, '浙江': 0, '安徽': 0, '福建': 0, '江西': 0, '山东': 0, '河南': 0, '湖北': 0, '湖南': 0, '广东': 0, '海南': 0, '四川': 0, '贵州': 0, '云南': 0, '陕西': 0, '甘肃': 0, '青海': 0, '台湾': 0, '内蒙古': 0, '广西': 0, '西藏': 0, '宁夏': 0, '新疆': 0, '香港': 0, '澳门': 0 };
 
       _export('ChinaMapCtrl', ChinaMapCtrl = function (_MetricsPanelCtrl) {
         _inherits(ChinaMapCtrl, _MetricsPanelCtrl);
@@ -93,7 +94,7 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
           _this.events.on('data-received', _this.onDataReceived.bind(_this));
           _this.events.on('init-edit-mode', _this.onInitEditMode.bind(_this));
 
-          var mapValue = { '北京': 0, '天津': 0, '上海': 0, '重庆': 0, '河北': 0, '山西': 0, '辽宁': 0, '吉林': 0, '黑龙江': 0, '江苏': 0, '浙江': 0, '安徽': 0, '福建': 0, '江西': 0, '山东': 0, '河南': 0, '湖北': 0, '湖南': 0, '广东': 0, '海南': 0, '四川': 0, '贵州': 0, '云南': 0, '陕西': 0, '甘肃': 0, '青海': 0, '台湾': 0, '内蒙古': 0, '广西': 0, '西藏': 0, '宁夏': 0, '新疆': 0, '香港': 0, '澳门': 0 };
+          _.defaults(_this.mapValue, mapValueDefaults);
 
           return _this;
         }
