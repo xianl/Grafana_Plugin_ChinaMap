@@ -42,7 +42,7 @@ export default function link(scope, elem, attrs, ctrl) {
 			backgroundColor: ctrl.panel.backgroundColor,
 			tooltip: {
 				trigger: 'item',
-				formatter: '{b} {c}'
+				formatter: '{b}: {c}'
 			},
 			visualMap: {
 				min: thresholds[0],
@@ -91,6 +91,7 @@ export default function link(scope, elem, attrs, ctrl) {
 						{name:'天津', value: ctrl.mapValue.天津},
 						{name:'辽宁', value: ctrl.mapValue.辽宁},
 						{name:'山东', value: ctrl.mapValue.山东},
+						{name:'江苏', value: ctrl.mapValue.江苏},
 					]
 				}
 			]

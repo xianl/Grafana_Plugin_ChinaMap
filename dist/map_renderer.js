@@ -42,7 +42,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 				backgroundColor: ctrl.panel.backgroundColor,
 				tooltip: {
 					trigger: 'item',
-					formatter: '{b} {c}'
+					formatter: '{b}: {c}'
 				},
 				visualMap: {
 					min: thresholds[0],
@@ -86,7 +86,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 							areaColor: ctrl.panel.itemEmphasisColor
 						}
 					},
-					data: [{ name: '天津', value: ctrl.mapValue.天津 }, { name: '辽宁', value: ctrl.mapValue.辽宁 }, { name: '山东', value: ctrl.mapValue.山东 }]
+					data: [{ name: '天津', value: ctrl.mapValue.天津 }, { name: '辽宁', value: ctrl.mapValue.辽宁 }, { name: '山东', value: ctrl.mapValue.山东 }, { name: '江苏', value: ctrl.mapValue.江苏 }]
 				}]
 			};
 			// 使用刚指定的配置项和数据显示图表。
