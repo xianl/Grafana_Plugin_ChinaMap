@@ -16,6 +16,7 @@ const panelDefaults = {
   thresholdTextColor: '#f5f5f5'
 };
 
+
 export class ChinaMapCtrl extends MetricsPanelCtrl {
 	
 	constructor($scope, $injector) {
@@ -27,7 +28,10 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
 		 _.defaults(this.panel, panelDefaults);
 		
 		this.events.on('data-received', this.onDataReceived.bind(this));
-		this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
+    this.events.on('init-edit-mode', this.onInitEditMode.bind(this));
+    
+    var mapValue = {'北京':0,'天津':0,'上海':0,'重庆':0,'河北':0,'山西':0,'辽宁':0,'吉林':0,'黑龙江':0,'江苏':0,'浙江':0,'安徽':0,'福建':0,'江西':0,'山东':0,'河南':0,'湖北':0,'湖南':0,'广东':0,'海南':0,'四川':0,'贵州':0,'云南':0,'陕西':0,'甘肃':0,'青海':0,'台湾':0,'内蒙古':0,'广西':0,'西藏':0,'宁夏':0,'新疆':0,'香港':0,'澳门':0};
+
 	}
 
 	onDataReceived(dataList) {
@@ -56,7 +60,6 @@ export class ChinaMapCtrl extends MetricsPanelCtrl {
 	
 	}
 
-	
 	changeThresholds() {
 		
 		this.updateThresholdData();
