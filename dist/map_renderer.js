@@ -62,7 +62,7 @@ System.register(['./lib/echarts.min'], function (_export, _context) {
 					name: '中国',
 					type: 'map',
 					mapType: 'china',
-					selectedMode: 'multiple',
+					//selectedMode : 'multiple',
 					label: {
 						normal: {
 							show: true,

@@ -63,7 +63,7 @@ export default function link(scope, elem, attrs, ctrl) {
 					name: '中国',
 					type: 'map',
 					mapType: 'china',
-					selectedMode : 'multiple',
+					//selectedMode : 'multiple',
 					label: {
 						normal: {
 							show: true,
