@@ -94,7 +94,7 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
           _this.events.on('data-received', _this.onDataReceived.bind(_this));
           _this.events.on('init-edit-mode', _this.onInitEditMode.bind(_this));
 
-          _.defaults(_this.mapValue, mapValueDefaults);
+          _this.mapValue = mapValueDefaults;
 
           return _this;
         }
