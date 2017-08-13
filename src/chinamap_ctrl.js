@@ -16,7 +16,7 @@ const panelDefaults = {
   thresholdTextColor: '#f5f5f5'
 };
 
-const mapValueDefaults = {北京:0,天津:0,上海:0,重庆:0,河北:0,山西:0,辽宁:0,吉林:0,黑龙江:0,江苏:null,浙江:0,安徽:0,福建:0,江西:0,山东:0,河南:0,湖北:0,湖南:0,广东:0,海南:0,四川:0,贵州:0,云南:0,陕西:0,甘肃:0,青海:0,台湾:0,内蒙古:0,广西:0,西藏:0,宁夏:0,新疆:0,香港:0,澳门:0};
+const mapValueDefaults = {北京:null,天津:null,上海:null,重庆:null,河北:null,山西:null,辽宁:null,吉林:null,黑龙江:null,江苏:null,浙江:null,安徽:bull,福建:null,江西:null,山东:null,河南:null,湖北:null,湖南:null,广东:null,海南:null,四川:null,贵州:null,云南:null,陕西:null,甘肃:null,青海:null,台湾:null,内蒙古:null,广西:null,西藏:null,宁夏:null,新疆:null,香港:null,澳门:null};
 
 
 export class ChinaMapCtrl extends MetricsPanelCtrl {

@@ -27,11 +27,111 @@ export default function link(scope, elem, attrs, ctrl) {
 	
 	data.forEach((dataPoint) => {
       
-	  if(dataPoint.key == '天津')  ctrl.mapValue.天津=dataPoint.valueFormatted;
-	  if(dataPoint.key == '辽宁')  ctrl.mapValue.辽宁=dataPoint.valueFormatted;
-	  if(dataPoint.key == '山东')  ctrl.mapValue.山东=dataPoint.valueFormatted;
-	
-	  
+	  switch (dataPoint.key ) {
+
+		case '北京' :
+			ctrl.mapValue.北京=dataPoint.valueFormatted;
+			break;
+		case '天津' :
+			ctrl.mapValue.天津=dataPoint.valueFormatted;
+			break;
+		case '上海' :
+			ctrl.mapValue.上海=dataPoint.valueFormatted;
+			break;
+		case '重庆' :
+			ctrl.mapValue.重庆=dataPoint.valueFormatted;
+			break;
+		case '河北' :
+			ctrl.mapValue.河北=dataPoint.valueFormatted;
+			break;	
+		case '山西' :
+			ctrl.mapValue.山西=dataPoint.valueFormatted;
+			break;
+		case '辽宁' :
+			ctrl.mapValue.辽宁=dataPoint.valueFormatted;
+			break;
+		case '吉林' :
+			ctrl.mapValue.吉林=dataPoint.valueFormatted;
+			break;
+		case '黑龙江' :
+			ctrl.mapValue.黑龙江=dataPoint.valueFormatted;
+			break;
+		case '江苏' :
+			ctrl.mapValue.江苏=dataPoint.valueFormatted;
+			break;
+		case '浙江' :
+			ctrl.mapValue.浙江=dataPoint.valueFormatted;
+			break;
+		case '安徽' :
+			ctrl.mapValue.安徽=dataPoint.valueFormatted;
+			break;
+		case '福建' :
+			ctrl.mapValue.福建=dataPoint.valueFormatted;
+			break;
+		case '江西' :
+			ctrl.mapValue.江西=dataPoint.valueFormatted;
+			break;
+		case '山东' :
+			ctrl.mapValue.山东=dataPoint.valueFormatted;
+			break;
+		case '河南' :
+			ctrl.mapValue.河南=dataPoint.valueFormatted;
+			break;
+		case '湖北' :
+			ctrl.mapValue.湖北=dataPoint.valueFormatted;
+			break;
+		case '湖南' :
+			ctrl.mapValue.湖南=dataPoint.valueFormatted;
+			break;
+		case '广东' :
+			ctrl.mapValue.广东=dataPoint.valueFormatted;
+			break;
+		case '海南' :
+			ctrl.mapValue.海南=dataPoint.valueFormatted;
+			break;
+		case '四川' :
+			ctrl.mapValue.四川=dataPoint.valueFormatted;
+			break;
+		case '贵州' :
+			ctrl.mapValue.贵州=dataPoint.valueFormatted;
+			break;
+		case '云南' :
+			ctrl.mapValue.云南=dataPoint.valueFormatted;
+			break;
+		case '陕西' :
+			ctrl.mapValue.陕西=dataPoint.valueFormatted;
+			break;
+		case '甘肃' :
+			ctrl.mapValue.甘肃=dataPoint.valueFormatted;
+			break;
+		case '青海' :
+			ctrl.mapValue.青海=dataPoint.valueFormatted;
+			break;
+		case '台湾' :
+			ctrl.mapValue.台湾=dataPoint.valueFormatted;
+			break;
+		case '内蒙古' :
+			ctrl.mapValue.内蒙古=dataPoint.valueFormatted;
+			break;
+		case '广西' :
+			ctrl.mapValue.广西=dataPoint.valueFormatted;
+			break;
+		case '西藏' :
+			ctrl.mapValue.西藏=dataPoint.valueFormatted;
+			break;
+		case '宁夏' :
+			ctrl.mapValue.宁夏=dataPoint.valueFormatted;
+			break;
+		case '新疆' :
+			ctrl.mapValue.新疆=dataPoint.valueFormatted;
+			break;
+		case '香港' :
+			ctrl.mapValue.香港=dataPoint.valueFormatted;
+			break;
+		case '澳门' :
+			ctrl.mapValue.澳门=dataPoint.valueFormatted;
+			break;
+	  }
     });
 	
 	thresholds = ctrl.panel.thresholds.split(',').map((strValue) => {
@@ -88,10 +188,40 @@ export default function link(scope, elem, attrs, ctrl) {
 						}
 					},		
 					data:[
+						{name:'北京', value: ctrl.mapValue.北京},
 						{name:'天津', value: ctrl.mapValue.天津},
+						{name:'上海', value: ctrl.mapValue.上海},
+						{name:'重庆', value: ctrl.mapValue.重庆},
+						{name:'河北', value: ctrl.mapValue.河北},
+						{name:'山西', value: ctrl.mapValue.山西},
 						{name:'辽宁', value: ctrl.mapValue.辽宁},
-						{name:'山东', value: ctrl.mapValue.山东},
+						{name:'吉林', value: ctrl.mapValue.吉林},
+						{name:'黑龙江', value: ctrl.mapValue.黑龙江},
 						{name:'江苏', value: ctrl.mapValue.江苏},
+						{name:'浙江', value: ctrl.mapValue.浙江},
+						{name:'安徽', value: ctrl.mapValue.安徽},
+						{name:'福建', value: ctrl.mapValue.福建},
+						{name:'江西', value: ctrl.mapValue.江西},
+						{name:'山东', value: ctrl.mapValue.山东},
+						{name:'河南', value: ctrl.mapValue.河南},
+						{name:'湖北', value: ctrl.mapValue.湖北},
+						{name:'湖南', value: ctrl.mapValue.湖南},
+						{name:'广东', value: ctrl.mapValue.广东},
+						{name:'海南', value: ctrl.mapValue.海南},
+						{name:'四川', value: ctrl.mapValue.四川},
+						{name:'贵州', value: ctrl.mapValue.贵州},
+						{name:'云南', value: ctrl.mapValue.云南},
+						{name:'陕西', value: ctrl.mapValue.陕西},
+						{name:'甘肃', value: ctrl.mapValue.甘肃},
+						{name:'青海', value: ctrl.mapValue.青海},
+						{name:'台湾', value: ctrl.mapValue.台湾},
+						{name:'内蒙古', value: ctrl.mapValue.内蒙古},
+						{name:'广西', value: ctrl.mapValue.广西},
+						{name:'西藏', value: ctrl.mapValue.西藏},
+						{name:'宁夏', value: ctrl.mapValue.宁夏},
+						{name:'新疆', value: ctrl.mapValue.新疆},
+						{name:'香港', value: ctrl.mapValue.香港},
+						{name:'澳门', value: ctrl.mapValue.澳门},
 					]
 				}
 			]
