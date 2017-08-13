@@ -17,16 +17,19 @@ export default function link(scope, elem, attrs, ctrl) {
     }
 	
 	const data = ctrl.data;
-	var value1;
-	var value2;
-	var value3;
+	//var value1;
+	//var value2;
+	//var value3;
+
+	var value = {'北京':0,'天津':0,'上海':0,'重庆':0,'河北':0,'山西':0,'辽宁':0,'吉林':0,'黑龙江':0,'江苏':0,'浙江':0,'安徽':0,'福建':0,'江西':0,'山东':0,'河南':0,'湖北':0,'湖南':0,'广东':0,'海南':0,'四川':0,'贵州':0,'云南':0,'陕西':0,'甘肃':0,'青海':0,'台湾':0,'内蒙古':0,'广西':0,'西藏':0,'宁夏':0,'新疆':0,'香港':0,'澳门':0}
+
 	var thresholds;
 	
 	data.forEach((dataPoint) => {
       
-	  if(dataPoint.key == '天津')  value1=dataPoint.valueFormatted;
-	  if(dataPoint.key == '辽宁')  value2=dataPoint.valueFormatted;
-	  if(dataPoint.key == '山东')  value3=dataPoint.valueFormatted;
+	  if(dataPoint.key == '天津')  value.天津=dataPoint.valueFormatted;
+	  if(dataPoint.key == '辽宁')  value.辽宁=dataPoint.valueFormatted;
+	  if(dataPoint.key == '山东')  value.山东=dataPoint.valueFormatted;
 	  
     });
 	
@@ -84,9 +87,9 @@ export default function link(scope, elem, attrs, ctrl) {
 						}
 					},		
 					data:[
-						{name:'天津', value: value1},
-						{name:'辽宁', value: value2},
-						{name:'山东', value: value3},
+						{name:'天津', value: value.天津},
+						{name:'辽宁', value: value.辽宁},
+						{name:'山东', value: value.山东},
 					]
 				}
 			]
