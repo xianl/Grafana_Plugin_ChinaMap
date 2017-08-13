@@ -158,7 +158,7 @@ System.register(['./lib/echarts.min', 'lodash'], function (_export, _context) {
 						color: ctrl.panel.thresholdTextColor
 					},
 					top: 'bottom',
-					text: ['高', '低'], // 文本，默认为数值文本
+					text: ['高', '低' + '  ms'], // 文本，默认为数值文本
 					calculable: true
 				},
 				series: [{
