@@ -189,7 +189,7 @@ export default function link(scope, elem, attrs, ctrl) {
 						}
 					},		
 					data:[
-						{name:'北京', value: _.round(ctrl.mapValue.北京)},
+						{name:'北京', value: ctrl.mapValue.北京 == null ?null:_.round(ctrl.mapValue.北京,2)},
 						{name:'天津', value: _.round(ctrl.mapValue.天津)},
 						{name:'上海', value: _.round(ctrl.mapValue.上海)},
 						{name:'重庆', value: _.round(ctrl.mapValue.重庆)},
