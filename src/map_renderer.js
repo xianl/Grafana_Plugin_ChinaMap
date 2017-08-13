@@ -28,7 +28,7 @@ export default function link(scope, elem, attrs, ctrl) {
 	data.forEach((dataPoint) => {
       
 	  if(dataPoint.key == '天津')  ctrl.mapValue.天津=dataPoint.valueFormatted;
-	  if(dataPoint.key == '辽宁')  ctrl.mapValue.辽宁=dataPoint.valueFormatted;
+	  //if(dataPoint.key == '辽宁')  ctrl.mapValue.辽宁=dataPoint.valueFormatted;
 	  if(dataPoint.key == '山东')  ctrl.mapValue.山东=dataPoint.valueFormatted;
 	  
     });
