@@ -75,7 +75,8 @@ System.register(['app/plugins/sdk', './lib/echarts.min', './map_renderer', 'loda
         labelEmphasisColor: '#f5896b',
         dataColors: ['#83fa52', '#f6630e', '#f60e48'],
         thresholds: '0,10',
-        thresholdTextColor: '#f5f5f5'
+        thresholdTextColor: '#f5f5f5',
+        unit: 'ms'
       };
       mapValueDefaults = { 北京: null, 天津: null, 上海: null, 重庆: null, 河北: null, 山西: null, 辽宁: null, 吉林: null, 黑龙江: null, 江苏: null, 浙江: null, 安徽: null, 福建: null, 江西: null, 山东: null, 河南: null, 湖北: null, 湖南: null, 广东: null, 海南: null, 四川: null, 贵州: null, 云南: null, 陕西: null, 甘肃: null, 青海: null, 台湾: null, 内蒙古: null, 广西: null, 西藏: null, 宁夏: null, 新疆: null, 香港: null, 澳门: null };
 

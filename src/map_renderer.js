@@ -143,7 +143,7 @@ export default function link(scope, elem, attrs, ctrl) {
 			backgroundColor: ctrl.panel.backgroundColor,
 			tooltip: {
 				trigger: 'item',
-				formatter: '{b}: {c}'
+				formatter: '{b} : {c}' + ctrl.panel.unit,
 			},
 			visualMap: {
 				min: thresholds[0],
@@ -156,7 +156,7 @@ export default function link(scope, elem, attrs, ctrl) {
 					color:ctrl.panel.thresholdTextColor
 			},
 			top: 'bottom',
-			text: ['高','低'+ '  ms'],           // 文本，默认为数值文本
+			text: ['高','低'+ '  ' + ctrl.panel.unit],           // 文本，默认为数值文本
 			calculable: true
 			},
 			series: [
