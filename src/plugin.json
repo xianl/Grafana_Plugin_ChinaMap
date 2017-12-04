@@ -6,8 +6,8 @@
   "info": {
     "description": "ChinaMap panel for grafana",
     "author": {
-      "name": "Wanda Inc.",
-      "url": "http://wanda.cn"
+      "name": "xxx Inc.",
+      "url": "http://xxx.cn"
     },
     "keywords": ["ChinaMap", "panel"],
     "version": "1.0.0",
